@@ -24,17 +24,17 @@ $(".btn").on("click",function () {
     }
 })
 
-$(".pic").on("click",function(){
+$(".pop").on("click",function(){
     $("#filter").fadeIn()
-    $("#content").animate({
-        width:"60%",
+    $(".mod").animate({
+        width:"50%",
         height:"60%"
     },800)
     changeText($(this))
 })
 
-$("#filter").not("#content").on("click",function(){
-    $("#content").animate({
+$("#filter").on("click",function(){
+    $(".mod").animate({
         width:"0%",
         height:"0%"
     },800)
@@ -42,7 +42,6 @@ $("#filter").not("#content").on("click",function(){
 })
 
 function changeText(e){
-    console.log(e.parents())
     let img=e.parent(".mid").siblings("img").attr('src');
     let h4=e.siblings("h4").html();
     let h6=e.siblings("h6").html();

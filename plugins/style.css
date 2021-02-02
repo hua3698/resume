@@ -132,19 +132,49 @@ section h2{
 }
 
 /* section skill */
-.card{
-    border: 1px solid #feaebb !important;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+.cardd{
+    position: relative;
+    background: #fff;
+    padding: 1rem ;
+    margin: 20px;
+    text-align: center;
     max-width: 300px;
     height: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    overflow: hidden;
 }
-.card:hover{
-    background: #333;
-    color: #f6f6f6;
-    transition: 1s ease;
-}
-.card *{
+.cardd *{
     margin: auto;
+}
+.cir{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 1.5s;
+}
+.content{
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+}
+.first:hover{
+    box-shadow: 0 0 0 400px #fc5c65;
+}
+.second:hover{
+    box-shadow: 0 0 0 400px #fed330;
+}
+.third:hover{
+    box-shadow: 0 0 0 400px #2bcbba;
+}
+.cir:hover~ .content{
+    color: #fff;
+}
+.cardd:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
 /* section port */
@@ -200,6 +230,9 @@ section h2{
 .mid h4{
     color: #c0e3e7;
 }
+.mid>p{
+    font-size: 0.5rem;
+}
 .mid>span{
     width: 50%;
     margin: auto;
@@ -210,7 +243,6 @@ section h2{
 .pic:hover span>a{
     text-decoration: none;
 }
-
 .pic:hover .overlay{
     bottom: 0;
     height: 100%;
@@ -230,15 +262,33 @@ section h2{
     background:rgba(0,0,0,.7);
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
-#content *{
+.mod{
+    width: 50%;
+    height: 60%;
+    /* padding: 5% 0; */
+}
+.mod *{
     margin: auto;
+}
+.modd{
+    width: 100%;
+    height: 100%;
+    /* margin: 5% 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modd>img{
+    border: 5px solid #e6e6e6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
 }
 
 /* footer */
@@ -316,13 +366,6 @@ section h2{
         padding: 5% 8%;        
         background: #f9f9f9;
         border: 1px solid #eee;
-    }
-    .card{
-        box-shadow: 0 0 0;
-    }
-    .card:hover{
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-
     }
 }
 
