@@ -154,6 +154,11 @@ section h2{
     border-radius: 50%;
     transition: 1.5s;
 }
+.cir>span{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
 .content{
     position: relative;
     z-index: 1;
@@ -192,6 +197,7 @@ section h2{
     position: relative;
     cursor: pointer;
     width: 50%;
+    height: 300px;
     overflow: hidden;
 }
 .pic>img{
